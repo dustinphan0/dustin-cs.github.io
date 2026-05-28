@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dustin Phan</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 25px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 12px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      font-weight: 400;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 35px;
+      list-style: none;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content p {
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    .hero-content h2 {
+      font-size: clamp(4rem, 10vw, 8rem);
+      font-weight: 200;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+    }
+
+    .buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .buttons a {
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.75);
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding-bottom: 120px;
+    }
+
+    section {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+      border-radius: 28px;
+      padding: 70px;
+      margin-bottom: 80px;
+    }
+
+    section span {
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 11px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    section h3 {
+      font-size: 3rem;
+      font-weight: 200;
+      margin-bottom: 25px;
+    }
+
+    section p {
+      color: rgba(255,255,255,0.6);
+      line-height: 1.9;
+      max-width: 700px;
+    }
+
+    .contact-links {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 5px;
+      transition: 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      border-color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: rgba(255,255,255,0.3);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      section {
+        padding: 40px 30px;
+      }
+
+      section h3 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>Dustin Phan</h1>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#equipment">Equipment</a></li>
+      <li><a href="#goals">Goals</a></li>
+      <li><a href="#notes">Notes</a></li>
+      <li><a href="#workflow">Workflow</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p>Minimal Website Template</p>
+      <h2>Dustin Phan</h2>
+
+      <div class="buttons">
+        <a href="#about">About</a>
+        <a href="#equipment">Equipment</a>
+        <a href="#goals">Goals</a>
+        <a href="#notes">Notes</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <section id="about">
+      <span>Section</span>
+      <h3>About</h3>
+      <p>
+        Write a short introduction about yourself, your interests, background,
+        projects, or what you are currently focused on.
+      </p>
+    </section>
+
+    <section id="equipment">
+      <span>Section</span>
+      <h3>Equipment</h3>
+      <p>
+        List your setup, devices, software, cameras, PC specs, keyboards,
+        workflow tools, or anything else you use daily.
+      </p>
+    </section>
+
+    <section id="goals">
+      <span>Section</span>
+      <h3>Goals</h3>
+      <p>
+        Add long-term goals, learning objectives, personal milestones,
+        career plans, or creative ambitions here.
+      </p>
+    </section>
+
+    <section id="notes">
+      <span>Section</span>
+      <h3>Notes</h3>
+      <p>
+        Store ideas, reflections, thoughts, quotes, random concepts,
+        or updates you want to remember.
+      </p>
+    </section>
+
+    <section id="workflow">
+      <span>Section</span>
+      <h3>Workflow</h3>
+      <p>
+        Explain how you study, create projects, edit videos, code,
+        stay productive, or organize your routines.
+      </p>
+    </section>
+
+    <section id="contact">
+      <span>Section</span>
+      <h3>Contact</h3>
+      <p>
+        Add your email, social media, GitHub, LinkedIn, or any other
+        platform people can use to reach out to you.
+      </p>
+
+      <div class="contact-links">
+        <a href="#">Email</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 Dustin Phan
+  </footer>
+
+</body>
+</html>
